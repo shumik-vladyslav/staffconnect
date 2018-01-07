@@ -43,7 +43,8 @@ export class UsersComponent implements OnInit {
   }
 
   select(item){
-    let user = {
+    console.log(item);
+    let user =    {
         type: "user",
         showTab: true,
         label: item.name,

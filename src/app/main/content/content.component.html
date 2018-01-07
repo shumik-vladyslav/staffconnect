@@ -1,7 +1,7 @@
 <!--<router-outlet></router-outlet>-->
 
 <div>
-  <div *ngFor="let tab of tabs" (click)="selectTab(tab)">
+  <div *ngFor="let tab of tabs" (click)="selectTab(tab)" tabindex="0:" [ngClass]="{'active-tab': tab.showTab}">
     {{tab.label}}
     <mat-icon class="nav-link-icon" (click)="removeTab(tab)">close</mat-icon>
   </div>

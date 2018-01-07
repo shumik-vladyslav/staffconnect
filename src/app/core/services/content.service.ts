@@ -72,6 +72,7 @@ export class ContentService
       if (!item.id) {
         item.id = this.tabs[this.tabs.length - 1].id + 1;
       }
+      console.log(item)
 
       this.tabs.push(item);
 

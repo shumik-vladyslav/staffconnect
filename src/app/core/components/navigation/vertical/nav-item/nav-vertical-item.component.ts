@@ -23,7 +23,7 @@ export class FuseNavVerticalItemComponent implements OnInit
         let item:any = Object.assign({}, this.item);
 
         item.type = item.typeNav;
-
         this.contentService.addTab(item);
+        console.log(this.item)
     }
 }
