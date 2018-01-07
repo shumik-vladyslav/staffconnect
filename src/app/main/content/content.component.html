@@ -1,0 +1,31 @@
+<!--<router-outlet></router-outlet>-->
+
+<div>
+  <div *ngFor="let tab of tabs" (click)="selectTab(tab)">
+    {{tab.label}}
+    <mat-icon class="nav-link-icon" (click)="removeTab(tab)">close</mat-icon>
+  </div>
+</div>
+
+<div class="wrapper">
+  <div *ngFor="let tab of tabs">
+    <app-users *ngIf="tab.type === 'users' && tab.showTab"></app-users>
+    <app-user *ngIf="tab.type === 'user' && tab.showTab" [id]="tab.userId"></app-user>
+    <app-calendar *ngIf="tab.type === 'calendar' && tab.showTab"></app-calendar>
+  </div>
+</div>
+<!--<mat-tab-group class="demo-tab-group">-->
+  <!--<mat-tab *ngFor="let tab of tabs" label="{{tab.label}}">-->
+    <!--<ng-template mat-tab-label>-->
+      <!--{{tab.label}}-->
+      <!--<mat-icon class="nav-link-icon">close</mat-icon>-->
+    <!--</ng-template>-->
+    <!--<div class="demo-tab-content">-->
+      <!--{{activeLinkIndex}}-->
+      <!--<app-users *ngIf="tab.type === 'users'"></app-users>-->
+      <!--<app-user *ngIf="tab.type === 'user'"></app-user>-->
+      <!--<app-calendar *ngIf="tab.type === 'calendar'"></app-calendar>-->
+    <!--</div>-->
+  <!--</mat-tab>-->
+<!--</mat-tab-group>-->
+
