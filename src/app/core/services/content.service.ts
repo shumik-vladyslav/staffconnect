@@ -54,7 +54,7 @@ export class ContentService
 
     tabSearch(item, type){
       let flag = true;
-      for (let tab: any of this.tabs){
+      for (let tab of this.tabs){
         if (item[type] === tab[type]){
           tab.showTab = true;
 
