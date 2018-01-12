@@ -18,6 +18,7 @@ import { FuseSearchBarModule } from '../core/components/search-bar/search-bar.mo
 import { UsersComponent } from './content/users/users.component';
 import { UserComponent } from './content/user/user.component';
 import { CalendarComponent } from './content/calendar/calendar.component';
+import { FullCalendarComponent } from './content/calendar/full-calendar/full-calendar.component';
 
 @NgModule({
     declarations: [
@@ -32,7 +33,8 @@ import { CalendarComponent } from './content/calendar/calendar.component';
         FuseQuickPanelComponent,
         UsersComponent,
         UserComponent,
-        CalendarComponent
+        CalendarComponent,
+        FullCalendarComponent
     ],
     imports     : [
         SharedModule,
